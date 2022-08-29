@@ -8,42 +8,75 @@
   <title>Porfolio</title>
 </head>
 <body>
-  <div class="container">
+  <div class="main-wrapper">
 
-  <header>
+  <header class="container header active" id="home">
+    <div class="header-content">
 
-     <div class="dark-light-icons">
-     <div id="light-mode"></div>
-     <div id="dark-mode"></div>
-    </div>
+        <div class="dark-light-icons">
+          <div id="light-mode"></div>
+           <div id="dark-mode"></div>
+        </div>
+      </div>
 
-  </header>
-   <main>
-     <div class="main-card">
-    <div class="text-intro">
-      <h1 class="my-intro">
-        Hi,There! I'm<span>Makoma</span>
-      </h1>
+   <div class="main-content">
+        <div class="main-card">
+          <div class="text-intro">
+           <h1 class="my-intro">
+          Hi,There! I'm<span>Makoma</span>
+           </h1>
        <h3>Web developer/Frontend developer</h3>
     <br>
-      <p>I am a frontend developer."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+          <p>I am a frontend developer."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+         aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
     </div>
     <div class="image-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1623091411466-19dce1ed99a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);">
 
        <div class="navbar-items">
-        <ul>
-        <li><a href="#" id="home-icon"></a></li>
-        <li><a href="projects.html" id="project-icon"></a></li>
-        <li><a href="#" id="about-icon"></a></li>
-        <li><a href="#" id="resume-icon"></a></li>
-        <li><a href="#" id="contact-icon"></a></li>
+         <ul class="active">
+            <li><a href="#" data-id="home" id="home-icon"></a></li>
+            <li><a href="#"  data-id="about"id="about-icon"></a></li>
+            <li><a href="#"  data-id="project"id="project-icon"></a></li>
+            <li><a href="#" data-id="resume" id="resume-icon"></a></li>
+            <li><a href="#" data-id="contact" id="contact-icon"></a></li>
        </ul>
       </div>
     </div>
     </div>
-   </main>
+  </div>
 
+      </header>
+  <section class="container about" id="about">
+    <div class="main-title">
+      <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
+    </div>
+    <div class="about-container">
+      <div class="left-about">
+        <h4>Information About me</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Eveniet labore nihil obcaecati consequatur. Debitis error doloremque,
+          vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
+          delectus dolore fugiat exercitationem a,
+          ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Harum non necessitatibus deleniti eum soluta.
+        </p>
+        </div>
+      </div>
+
+    </section>
+      <section class="container projects" id="projects">
+        hey
+      </section>
+
+      <section class="container resume" id="resume">
+        yo yo
+      </section>
+
+      <section class="container contact" id="contact">
+        whassup
+      </section>
 
   </div>
   <script src="app.js"></script>
