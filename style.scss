@@ -12,19 +12,16 @@
   --white: #f8f8f8;
   --grey: #dbdbde;
   --dark-grey: #9e9ea7;
+  --grey-black:#1e1e1e;
 }
 body{
   width: 100%;
   height: 100vh;
   transition: all .4s ease-in-out;
+  background-color: var(--grey-black);
 
 }
-.main-wrapper {
-  background-image: url(https://images.unsplash.com/photo-1586982469023-9f3e18321fc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80);
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-}
+
 header {
   min-height: 100vh;
   overflow: hidden;
@@ -39,9 +36,10 @@ section {
   padding: 3rem 18rem;
 }
 .container{
-  display: none;
+  // display: none;
   transform: translateY(-100%) scale(0);
   transition: all .4s ease-in-out;
+  background-color: var(--grey-black);
 }
 
 //home page//
@@ -155,7 +153,7 @@ p {
     left: 40px;
 }
 
-.navbar-items ul li {
+.nav-btns li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,7 +167,7 @@ p {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 }
-.navbar-items ul li:after {
+.nav-btns li:after {
   position: absolute;
   background: white;
   color: black;
@@ -183,7 +181,7 @@ p {
   transition: all .4s ease-out;
 }
 
-.navbar-items ul li a {
+.nav-btns li a {
   font-size: 16px;
   padding: 8px 20px;
   margin: 0 6px;
@@ -197,60 +195,62 @@ p {
 //   color: var(--primary);
 
 // }
-.navbar-items ul li:nth-child(1):after {
+.nav-btns li:nth-child(1):after {
   content: "Home";
   line-height: 80px;
   text-align: center;
 }
 
-.navbar-items ul li:nth-child(2):after {
+.nav-btns li:nth-child(2):after {
   content: "About";
   line-height: 80px;
   text-align: center;
 }
 
-.navbar-items ul li:nth-child(3):after {
+.nav-btns li:nth-child(3):after {
   content: "Projects";
   line-height: 80px;
   text-align: center;
 }
-.navbar-items ul li:nth-child(4):after {
+.nav-btns li:nth-child(4):after {
   content: "resume";
   line-height: 80px;
   text-align: center;
 }
 
-.navbar-items ul li:nth-child(5):after {
+.nav-btns li:nth-child(5):after {
   content: "contact";
   line-height: 80px;
   text-align: center;
 }
 
-.navbar-items ul li:hover {
+.nav-btns li:hover {
   transform: translateX(-70px);
 }
 
-.navbar-items ul li:hover:after {
+.nav-btns li:hover:after {
   opacity: 1;
   transform: perspective(400px) rotateY(0deg) scale(1);
   color: var(--primary);
+
 }
 
-// .active {
-//   display: block;
-//   animation: appear 1s ease-in-out;
-//   transform: translateY(0) scaleY(1);
+.active {
+  display: block;
+  animation: appear 1s ease-in-out;
+  transform: translateY(0) scaleY(1);
 
-//   @keyframes appear {
-//     0% {
-//       transform: translateY(-100%) scaleY(0);
-//     }
+  @keyframes appear {
+    0% {
+      transform: translateY(-100%) scaleY(0);
+    }
 
-//     100% {
-//       transform: translateY(0) scaleY(1);
-//     }
-//   }
-// }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+  }
+}
+
 
 #home-icon {
   display: inline-block;
@@ -288,4 +288,14 @@ p {
   height: 40px;
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAABmJLR0QA/wD/AP+gvaeTAAACU0lEQVRoge3aO2sUURiA4WeTgIViMCiSaIoIkkJQIuifsBMV9D9oJcROEFtBKy+FYKkE0tmLoKCYKNaxEa28kAgWYjIWsxuy6+xmsnPZ7OG88DUzzPedd+fMnMsskUgkEhk+prGANSQ54zPuYN8A2luIaXyXX7QzXmNP7a0uwIL+ZVtxs/ZWF2An3bhb/MaxuhveL0VlBx1rWMRsllyji3AI/MQp6ct0k5HBtKUWDkhHjTZCvsOk3Xt864HQhelwDLlLZ1KF8HOcxCSWKshfOkWGhPvaf8Q5/C2Ys2hUJvwOYxn5HoYqfKFLvkP4EaLw4R45r4UoPJ6VrMkoPuwG4TLf0lM9zq3jcYm1+qZM4XPbnD9dYq1S6bfrLMmeucFZ6V0eeJcuUzjBxS45Xw5ItnLhFdnbO19DFU5wNyPnFWyEKryB8xl5b4cqnEh3G4535G3gUajCifR57hybRwcgXZtwgo+Y6MjfwC3tz/Q6nuBq85qhFU7wCnsz6lzGF7zAmS3Hx5riZS04ahdO8AYH8xTfwgTuKb6eHohwq3v3mm93Yw7Lwyic4JP/3955mClLuO5NvBm8lT1O92J/BW3ZpMo73IoN6Ywsz1fGEenG4FB26c5YkS44uq2yxvCgYI1dJdyKZVzHCenOySQu4X0JuduIXx5CJwqHThQOnSzhX9tc8wfzONKMG81jVdNP3dU8iRf1HtfmM66Z3+aaMqKfuk/zCM/qvRbNWvFM1SC807rfcDSPMOm/8Z5Ju0TeqVrVwnnrrkrvbG7ZSCQSiUQikUgZ/APPTG1I9Y4sTQAAAABJRU5ErkJggg==') 50% 50% no-repeat;
   padding: 10px 50px 40px;
+}
+//about
+.text-about p {
+  color: var(--white);
+}
+.sec-about {
+  display: none;
+  transform: translateY(0) scaleY(1);
+  background-color: red;
+
 }
